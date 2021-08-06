@@ -130,7 +130,9 @@ abstract class _PomodoroStore with Store {
       _timerValue = 1000;
     }
 
-    stop();
-    start();
+    if (started) {
+      stop();
+      start();
+    }
   }
 }
